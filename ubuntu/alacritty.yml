@@ -1,0 +1,41 @@
+window:
+  dynamic_title: true
+  dimensions:
+    columns: 90
+    lines: 30
+  opacity: 0.8
+  padding:
+    x: 5
+    y: 0
+
+cursor:
+  style:
+    shape: Block #(Block, Underline, Beam)
+    blinking: Always
+  unfocused_hollow: false
+  blink_interval: 400
+
+scrolling:
+  history: 10000
+
+env:
+  TERM: xterm-256color
+
+live_config_reload: true
+
+font:
+  size: 14
+  normal:
+    family: "FiraCode Nerd Font"
+
+  offset:
+    x: 0
+    y: 1
+  glyph_offset:
+    x: 0
+    y: 0
+  draw_bold_text_with_bright_colors: true
+
+colors:
+  primary:
+    background: "#000918"
