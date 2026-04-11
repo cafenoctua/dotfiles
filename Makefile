@@ -1,6 +1,10 @@
 #!/bin/bash
 
-.PHONY: set_ubuntu
+.PHONY: mac ubuntu
+
+mac:
+	cd mac && bash install.sh
+
 set_ubuntu:
 	cd ubuntu ; \
 	bash set_dotfiles.sh ; \

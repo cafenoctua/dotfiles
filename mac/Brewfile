@@ -1,0 +1,78 @@
+tap "hashicorp/tap"
+tap "songmu/tap"
+
+# CLI tools
+brew "git"
+brew "gh"
+brew "wget"
+brew "coreutils"
+brew "gnupg"
+brew "direnv"
+brew "qrencode"
+brew "imagemagick"
+brew "fontconfig"
+brew "harfbuzz"
+brew "pkgconf"
+
+# Shell & terminal
+brew "starship"
+brew "zellij"
+
+# Editor
+brew "neovim"
+
+# Language version managers
+brew "mise"
+brew "asdf"
+
+# Languages / runtimes
+brew "mysql-client"
+brew "uv"            # Python package manager
+
+# Cloud & infra
+brew "hashicorp/tap/terraform"
+brew "deck"          # Kong deck
+
+# Code tools
+brew "songmu/tap/laminate"  # Code screenshot tool
+
+# Apps
+cask "alacritty"
+cask "font-fira-code-nerd-font"
+cask "visual-studio-code"
+cask "whisky"
+
+# VS Code extensions
+vscode "anthropic.claude-code"
+vscode "batisteo.vscode-django"
+vscode "bierner.markdown-mermaid"
+vscode "catppuccin.catppuccin-vsc-icons"
+vscode "dbtlabsinc.dbt"
+vscode "docker.docker"
+vscode "donjayamanne.python-environment-manager"
+vscode "donjayamanne.python-extension-pack"
+vscode "fill-labs.dependi"
+vscode "github.copilot-chat"
+vscode "github.vscode-github-actions"
+vscode "janisdd.vscode-edit-csv"
+vscode "kevinrose.vsc-python-indent"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-vscode-remote.remote-containers"
+vscode "njpwerner.autodocstring"
+vscode "oderwat.indent-rainbow"
+vscode "redhat.vscode-yaml"
+vscode "rust-lang.rust-analyzer"
+vscode "sdras.night-owl"
+vscode "tamasfe.even-better-toml"
+vscode "vadimcn.vscode-lldb"
+vscode "wholroyd.jinja"
+vscode "yzhang.markdown-all-in-one"
+vscode "4ops.terraform"
+
+# Cargo (Rust)
+cargo "silicon"

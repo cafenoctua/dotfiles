@@ -1,0 +1,22 @@
+# 認証情報・シークレット
+**/.gitconfig
+**/gh/config.yml
+**/gh/hosts.yml
+**/gcloud/
+**/.aws/
+**/.ssh/
+
+# ローカル固有の設定
+**/.claude/settings.local.json
+**/configstore/
+
+# バックアップ
+**/*.bak
+**/nvim.bak/
+
+# OS
+.DS_Store
+
+# claude
+prpm.lock
+.claude
