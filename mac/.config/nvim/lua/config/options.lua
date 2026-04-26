@@ -2,6 +2,9 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+-- Homebrewのバイナリ（rg等）をnvimのPATHに追加
+vim.env.PATH = "/opt/homebrew/bin:" .. vim.env.PATH
+
 -- SQL デフォルト方言ヒント
 vim.g.sql_type_default = "sql"
 
@@ -86,3 +89,9 @@ vim.diagnostic.config({
     end,
   },
 })
+
+-- gl でカーソル下の診断をフロートウィンドウに表示（全文確認用）
+-- LazyVim の <leader>cd と同じ動作、より短いショートカット
+vim.keymap.set("n", "gl", function()
+  vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+end, { desc = "Show Diagnostic (float)" })
