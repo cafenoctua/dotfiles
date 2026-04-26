@@ -226,6 +226,22 @@ keybinds clear-defaults=true {
     }
 }
 
+themes {
+    navy {
+        fg 192 202 245   // #c0caf5
+        bg  13  27  62   // #0d1b3e
+        black   15  22  50   // #0f1632
+        red    247  99  91   // #f7635b
+        green  158 206 106   // #9ece6a
+        yellow 224 175 104   // #e0af68
+        blue   122 162 247   // #7aa2f7
+        magenta 187 154 247  // #bb9af7
+        cyan   125 207 255   // #7dcfff
+        white  169 177 214   // #a9b1d6
+        orange 255 158  100  // #ff9e64
+    }
+}
+
 // Plugin aliases - can be used to change the implementation of Zellij
 // changing these requires a restart to take effect
 plugins {
@@ -259,8 +275,8 @@ load_plugins {
  
 // Choose the theme that is specified in the themes section.
 // Default: default
-// 
-// theme "dracula"
+//
+theme "navy"
  
 // Choose the base input mode of zellij.
 // Default: normal

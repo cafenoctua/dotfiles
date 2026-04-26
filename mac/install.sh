@@ -23,7 +23,7 @@ warn()    { echo -e "${YELLOW}  !${RESET} $*"; }
 ITEMS=(
   "homebrew|Homebrew + Brewfile (全パッケージ)|on"
   "symlinks|設定ファイルのシンボリックリンク|on"
-  "alacritty_themes|Alacritty テーマ集|on"
+  "ghostty|Ghostty 設定のシンボリックリンク|on"
   "mise|mise で言語ランタイムをインストール (Node / Rust / Python)|on"
   "rust_toolchain|Rust toolchain コンポーネント (rust-analyzer / rustfmt / clippy)|on"
   "nvim_plugins|Neovim プラグインのインストール|on"
@@ -173,7 +173,6 @@ install_symlinks() {
 
   # Config files
   symlink "$DOTFILES_DIR/.config/starship.toml"             "$HOME/.config/starship.toml"
-  symlink "$DOTFILES_DIR/.config/alacritty/alacritty.toml"  "$HOME/.config/alacritty/alacritty.toml"
   symlink "$DOTFILES_DIR/.config/zellij/config.kdl"         "$HOME/.config/zellij/config.kdl"
   symlink "$DOTFILES_DIR/.config/mise/config.toml"          "$HOME/.config/mise/config.toml"
   symlink "$DOTFILES_DIR/.config/git/ignore"                "$HOME/.config/git/ignore"
@@ -192,16 +191,23 @@ install_symlinks() {
   fi
 }
 
-install_alacritty_themes() {
-  local themes_dir="$HOME/.config/alacritty/themes"
-  if [ ! -d "$themes_dir" ]; then
-    info "alacritty-theme をインストール中..."
-    git clone https://github.com/alacritty/alacritty-theme "$themes_dir"
+install_ghostty() {
+  info "Ghostty 設定のシンボリックリンクを作成中..."
+  local ghostty_config_dir="$HOME/.config/ghostty"
+  mkdir -p "$ghostty_config_dir"
+  local src="$DOTFILES_DIR/.config/ghostty/config"
+  local dst="$ghostty_config_dir/config"
+  if [ -L "$dst" ]; then
+    warn "スキップ (既にリンク済み): $dst"
+  elif [ -e "$dst" ]; then
+    warn "バックアップ: $dst → $dst.bak"
+    mv "$dst" "$dst.bak"
+    ln -s "$src" "$dst"
+    success "リンク作成: $dst"
   else
-    info "alacritty-theme を更新中..."
-    git -C "$themes_dir" pull --quiet
+    ln -s "$src" "$dst"
+    success "リンク作成: $dst"
   fi
-  success "Alacritty テーマ完了"
 }
 
 install_mise() {
@@ -287,7 +293,7 @@ echo ""
 # ---------------------------------------------------------------
 [[ "${SELECTED[homebrew]}"       == "on" ]] && install_homebrew
 [[ "${SELECTED[symlinks]}"       == "on" ]] && install_symlinks
-[[ "${SELECTED[alacritty_themes]}" == "on" ]] && install_alacritty_themes
+[[ "${SELECTED[ghostty]}"        == "on" ]] && install_ghostty
 [[ "${SELECTED[mise]}"           == "on" ]] && install_mise
 [[ "${SELECTED[rust_toolchain]}" == "on" ]] && install_rust_toolchain
 [[ "${SELECTED[nvim_plugins]}"   == "on" ]] && install_nvim_plugins
