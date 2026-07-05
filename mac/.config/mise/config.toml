@@ -1,6 +1,6 @@
 [tools]
 node = "20"
-rust = "latest"
+rust = "1.91.1"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python"]

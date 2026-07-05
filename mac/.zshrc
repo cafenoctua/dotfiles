@@ -54,3 +54,6 @@ export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 if [ -n "$GHOSTTY_RESOURCES_DIR" ] && [ -z "$ZELLIJ" ]; then
   zellij
 fi
+
+# direnv hook (per-directory env, e.g. dbt-core の dbt shim)
+eval "$(direnv hook zsh)"

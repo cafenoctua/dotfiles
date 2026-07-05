@@ -75,3 +75,11 @@ map("n", "<leader>Dr", "<cmd>DBUIRenameBuffer<cr>",
   { desc = "Rename DB Buffer" })
 map("n", "<leader>Dq", "<cmd>DBUILastQueryInfo<cr>",
   { desc = "Last Query Info" })
+
+-- ============================================================
+-- マウス設定
+-- ============================================================
+-- <C-LeftMouse> のデフォルトタグジャンプ(定義ダイアログ)を無効化して通常クリックに戻す
+map("n", "<C-LeftMouse>", "<LeftMouse>", { desc = "Left click (no tag jump)" })
+-- 右クリックでタグジャンプ(定義ダイアログ)を起動
+map("n", "<RightMouse>", "<LeftMouse><C-]>", { desc = "Go to Definition (right click)" })

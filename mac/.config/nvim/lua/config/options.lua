@@ -5,6 +5,9 @@
 -- Homebrewのバイナリ（rg等）をnvimのPATHに追加
 vim.env.PATH = "/opt/homebrew/bin:" .. vim.env.PATH
 
+-- CursorHold イベントの発火までの待機時間 (ms) を短縮して診断フロートをすばやく表示
+vim.opt.updatetime = 500
+
 -- SQL デフォルト方言ヒント
 vim.g.sql_type_default = "sql"
 
