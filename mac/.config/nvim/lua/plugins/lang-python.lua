@@ -11,7 +11,6 @@ return {
               analysis = {
                 typeCheckingMode = "standard",
                 autoSearchPaths = true,
-                useLibraryCodeForTypes = true,
                 diagnosticMode = "openFilesOnly",
               },
             },
@@ -57,13 +56,14 @@ return {
   -- Mason: basedpyright / ruff / debugpy を自動インストール
   {
     "mason-org/mason.nvim",
-    opts = {
-      ensure_installed = {
+    opts = function(_, opts)
+      opts.ensure_installed = opts.ensure_installed or {}
+      vim.list_extend(opts.ensure_installed, {
         "basedpyright",
         "ruff",
         "debugpy",
-      },
-    },
+      })
+    end,
   },
 
   -- nvim-dap-python: Python DAP アダプター (debugpy経由)
