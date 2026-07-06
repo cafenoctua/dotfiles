@@ -7,5 +7,14 @@ return {
     explorer = {
       replace_netrw = true,
     },
+    -- explorerで隠しファイル・gitで未追跡のファイルもデフォルト表示
+    picker = {
+      sources = {
+        explorer = {
+          hidden = true,
+          ignored = true,
+        },
+      },
+    },
   },
 }
