@@ -21,6 +21,9 @@ scrollback-limit = 10000
 # Term
 term = xterm-256color
 
+# macOSのOptionキーをAltとして送信する（Zellijなどのalt+キー操作に必要）
+macos-option-as-alt = true
+
 # Shell integration (Zellij連携)
 shell-integration = zsh
 shell-integration-features = cursor,sudo,title
