@@ -13,7 +13,7 @@ dotfiles/
 │   ├── .zprofile           # Zsh プロファイル
 │   └── .config/
 │       ├── alacritty/      # ターミナルエミュレーター設定
-│       ├── zellij/         # ターミナルマルチプレクサー設定
+│       ├── herdr/          # ターミナルマルチプレクサー設定
 │       ├── nvim/           # Neovim (LazyVim) 設定
 │       ├── starship.toml   # プロンプト設定
 │       ├── mise/           # 言語バージョン管理設定
@@ -135,7 +135,7 @@ Neovim を起動して `:Mason` を開き、以下がインストールされて
 | `mise` | 言語バージョン管理 (Node, Rust, Python) |
 | `neovim` | エディター |
 | `starship` | シェルプロンプト |
-| `zellij` | ターミナルマルチプレクサー |
+| `herdr` | ターミナルマルチプレクサー |
 | `terraform` | インフラ管理 |
 | `uv` | Python パッケージマネージャー |
 | `mysql-client` | MySQL クライアント |

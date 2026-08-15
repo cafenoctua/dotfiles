@@ -1,0 +1,16 @@
+# herdr configuration
+# Place this file at ~/.config/herdr/config.toml
+
+[theme]
+# zellijで使っていた navy テーマ (tokyonight系) に近いビルトインをベースにする
+name = "tokyo-night"
+
+[theme.custom]
+panel_bg = "#0d1b3e"
+accent = "#7aa2f7"
+red = "#f7635b"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"

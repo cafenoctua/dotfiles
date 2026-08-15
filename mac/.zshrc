@@ -50,9 +50,9 @@ alias dbtf=$HOME/.local/bin/dbt
 # Added by Antigravity
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
-# Ghostty + Zellij: Ghostty 起動時に自動で Zellij セッションを開始
-if [ -n "$GHOSTTY_RESOURCES_DIR" ] && [ -z "$ZELLIJ" ]; then
-  zellij
+# Ghostty + herdr: Ghostty 起動時に自動で herdr セッションを開始
+if [ -n "$GHOSTTY_RESOURCES_DIR" ] && [ -z "$HERDR_ENV" ]; then
+  herdr
 fi
 
 # direnv hook (per-directory env, e.g. dbt-core の dbt shim)
