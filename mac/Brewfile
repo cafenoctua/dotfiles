@@ -16,7 +16,7 @@ brew "pkgconf"
 
 # Shell & terminal
 brew "starship"
-brew "zellij"
+brew "herdr"
 
 # Editor
 brew "neovim"

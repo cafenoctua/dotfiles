@@ -173,7 +173,7 @@ install_symlinks() {
 
   # Config files
   symlink "$DOTFILES_DIR/.config/starship.toml"             "$HOME/.config/starship.toml"
-  symlink "$DOTFILES_DIR/.config/zellij/config.kdl"         "$HOME/.config/zellij/config.kdl"
+  symlink "$DOTFILES_DIR/.config/herdr/config.toml"          "$HOME/.config/herdr/config.toml"
   symlink "$DOTFILES_DIR/.config/mise/config.toml"          "$HOME/.config/mise/config.toml"
   symlink "$DOTFILES_DIR/.config/git/ignore"                "$HOME/.config/git/ignore"
 
