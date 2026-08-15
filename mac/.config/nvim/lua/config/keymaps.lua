@@ -16,28 +16,8 @@ if uname.sysname == "Darwin" then
   map("n", "<M-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 end
 
--- ============================================================
--- DAP 追加キーマップ  <leader>d*
--- (rust.lua に定義済みの db/dB/dr/dl/dh/ds/du は除く)
--- ============================================================
-map("n", "<leader>dc", function() require("dap").continue() end,
-  { desc = "Continue / Start Debug" })
-map("n", "<leader>dC", function() require("dap").run_to_cursor() end,
-  { desc = "Run to Cursor" })
-map("n", "<leader>di", function() require("dap").step_into() end,
-  { desc = "Step Into" })
-map("n", "<leader>do", function() require("dap").step_out() end,
-  { desc = "Step Out" })
-map("n", "<leader>dO", function() require("dap").step_over() end,
-  { desc = "Step Over" })
-map("n", "<leader>dp", function() require("dap").pause() end,
-  { desc = "Pause" })
-map("n", "<leader>dt", function() require("dap").terminate() end,
-  { desc = "Terminate Debug Session" })
-map("n", "<leader>de", function() require("dapui").eval() end,
-  { desc = "Eval (DAP UI)" })
-map("v", "<leader>de", function() require("dapui").eval() end,
-  { desc = "Eval Selection (DAP UI)" })
+-- DAP のキーマップは lazyvim.plugins.extras.dap.core が db/dc/dl/di/do/dO/dp/dr/ds/dw 等を
+-- 一括提供するため、ここでの個別定義は行わない。
 
 -- ============================================================
 -- Neotest (テスト) キーマップ  <leader>t*
