@@ -10,7 +10,8 @@
     "lazyvim.plugins.extras.lang.sql",
     "lazyvim.plugins.extras.test.core",
     "lazyvim.plugins.extras.editor.snacks_picker",
-    "lazyvim.plugins.extras.editor.aerial"
+    "lazyvim.plugins.extras.editor.aerial",
+    "lazyvim.plugins.extras.util.octo"
   ],
   "install_version": 8,
   "news": {
