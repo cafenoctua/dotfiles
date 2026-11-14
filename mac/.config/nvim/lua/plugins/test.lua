@@ -1,5 +1,7 @@
 return {
-  -- neotest: Python + Rust アダプター登録
+  -- neotest: Python アダプター登録
+  -- Rust は lazyvim.plugins.extras.lang.rust (rustaceanvim) が
+  -- rustaceanvim.neotest アダプターを自動登録するためここでは扱わない
   {
     "nvim-neotest/neotest",
     dependencies = {
@@ -8,7 +10,6 @@ return {
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
       "nvim-neotest/neotest-python",
-      "rouge8/neotest-rust",
     },
     opts = function(_, opts)
       opts.adapters = opts.adapters or {}
@@ -32,15 +33,6 @@ return {
             end
             return "python3"
           end,
-        })
-      )
-
-      -- Rust: neotest-rust + codelldb DAP統合
-      table.insert(
-        opts.adapters,
-        require("neotest-rust")({
-          args = { "--no-capture" },
-          dap_adapter = "codelldb",
         })
       )
 
